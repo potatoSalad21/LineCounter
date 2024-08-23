@@ -18,7 +18,7 @@ func main() {
 		path = os.Args[1]
 		exts = []string{"go", "c", "js", "cpp", "html", "py", "ts", "rs", "cs"}
 	)
-	var c lines.Counter
+	c := lines.NewCounter()
 
 	err := c.CountAll(path, exts)
 	if err != nil {

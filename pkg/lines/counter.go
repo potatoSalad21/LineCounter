@@ -12,6 +12,12 @@ type Counter struct {
 	Count int
 }
 
+func NewCounter() Counter {
+	return Counter{
+		Count: 0,
+	}
+}
+
 func (c *Counter) CountAll(path string, exts []string) error {
 	if path[len(path)-1] != '/' {
 		path += "/"
